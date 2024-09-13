@@ -58,6 +58,7 @@ module.exports = {
               "/detail/abbyy-fine-reader-15",
               "/detail/photoshop-2023-full",
               "/detail/fix-unlicensed-adobe",
+              "/detail/nhung-tua-game-choi-2-nguoi",
             ],
             renderer: new PuppeteerRenderer({
               maxConcurrentRoutes: 2,
