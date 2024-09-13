@@ -8,25 +8,13 @@
               <div class="content" v-html="postDetail.description"></div>
               <div class="content" v-html="postDetail.content"></div>
               <!-- Link download -->
-              <div
-                class="mt-5 mb-5"
-                v-for="group in postLinkDownloads"
-                :key="group.name"
-              >
-                <h5
-                  v-if="group.name && group.name != 'null'"
-                  class="title is-5"
-                >
+              <div class="mt-5 mb-5" v-for="group in postLinkDownloads" :key="group.name">
+                <h5 v-if="group.name && group.name != 'null'" class="title is-5">
                   {{ group.name }}:
                 </h5>
                 <div id="link">
-                  <a
-                    class="button is-primary is-large mr-2"
-                    v-for="link in group.links"
-                    :key="link.id"
-                    target="_blank"
-                    :href="link.url"
-                  >
+                  <a class="button is-primary is-large mr-2" v-for="link in group.links" :key="link.id" target="_blank"
+                    :href="link.url">
                     <span class="icon is-medium">
                       <font-awesome-icon icon="download" />
                     </span>
@@ -36,13 +24,15 @@
               </div>
               <article class="message is-success">
                 <div class="message-body">
-                  Nếu có khó khăn, vấn đề về link download hoặc gặp lỗi trong
-                  quá trình cài đặt, bạn đừng ngần ngại để lại
-                  <strong>bình luận</strong> hoặc <strong>phản hồi</strong> bên
-                  dưới. Chúng mình sẽ trợ giúp nhanh nhất có thể nhé!<br />
-                  Hy vọng những bài viết trên trang DayNe.run sẽ hữu ích đối với
-                  bạn. Nếu có thiếu xót, rất mong góp ý từ mọi người!<br />
-                  <em>Cảm ơn đã ghé vào DayNe.run ^^!</em>
+                  <p><strong>Mật khẩu giải nén</strong> mặc định của file cài đặt là <strong>dayne.run</strong></p>
+                  <p>Nếu có khó khăn, vấn đề về link download hoặc gặp lỗi trong
+                    quá trình cài đặt, bạn đừng ngần ngại để lại
+                    <strong>bình luận</strong> hoặc <strong>phản hồi</strong> bên
+                    dưới. Chúng mình sẽ trợ giúp nhanh nhất có thể nhé!<br />
+                    Hy vọng những bài viết trên trang DayNe.run sẽ hữu ích đối với
+                    bạn. Nếu có thiếu xót, rất mong góp ý từ mọi người!<br />
+                    <em>Cảm ơn đã ghé vào DayNe.run ^^!</em>
+                  </p>
                 </div>
               </article>
               <hr />
@@ -179,7 +169,7 @@ export default {
       window.setTimeout(() => {
         postAPI
           .updateReadNum(this.postCode)
-          .then(() => {})
+          .then(() => { })
           .catch((err) => {
             console.error("Load post detail failed ", err);
           });
